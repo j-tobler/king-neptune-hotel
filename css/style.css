@@ -1,0 +1,614 @@
+html {
+    margin: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-flow: column;
+}
+
+/* Landing Page ------------------------------------------------------------ */
+
+#landing-page {
+    height: 100%;
+}
+
+#landing-page body {
+    height: 100%;
+    overflow: hidden;
+}
+
+#video-container {
+    position: absolute;
+    overflow: visible;
+    height: 100%;
+    width: 100%;
+}
+
+#video-container > video {
+    position: absolute;
+    height: 102%;
+    width: 102%;
+    top: -1%;
+    left: -1%;
+    object-fit: cover;
+}
+
+#video-container > #video-overlay {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#video-overlay > h1 {
+    color: whitesmoke;
+    font-family: 'Cinzel', serif;
+    text-shadow: 2px 2px 3px black;
+    font-size: 5em;
+    padding: 0;
+    margin: 0;
+}
+
+#video-overlay > p {
+    margin: 0;
+    padding: 0;
+    color: whitesmoke;
+    text-shadow: 1px 1px 2px black;
+    font-size: 1.5em;
+}
+
+#video-overlay #buttons {
+    margin-top: 4em;
+    display: flex;
+    justify-content: center;
+}
+
+#video-overlay .button-container {
+    width: 300px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#video-overlay .button-container:nth-child(2) {
+    justify-content: flex-start;
+}
+
+#video-overlay #buttons a {
+    padding: 10px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    color: black;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+#video-overlay #buttons a:hover {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+/* Nav Bar ----------------------------------------------------------------- */
+
+#navigation-bar {
+    position: relative;
+    background: rgba(255, 255, 255, 0.2);
+    z-index: 1;
+}
+
+#centre-nav {
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#right-nav {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 20px;
+}
+
+.menu-item {
+    display: flex;
+    position: relative;
+}
+
+.menu-item a {
+    padding: 1em;
+    background: none;
+    margin: 0;
+    flex-grow: 1;
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+}
+
+#navigation-bar img {
+    height: 50px;
+}
+
+#centre-nav > a {
+    display: flex;
+}
+
+.menu-item :after {
+    position: absolute;
+    content: "";
+    height: 3px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #2659A1;
+    transition: 200ms;
+    width: 0;
+}
+
+.menu-item :hover:after {
+    width: 100%;
+}
+
+#current-page {
+    color: #2659A1;
+}
+
+#centre-nav > a {
+    transition: 200ms;
+}
+
+#centre-nav > a:hover {
+    background: none;
+    transform: scale(1.1);
+}
+
+#current-page {
+    font-weight: bold;
+}
+
+/* Page Content ------------------------------------------------------------ */
+
+.page-content {
+    margin: 0 20px 20px 20px;
+    padding: 20px 20px;
+    background: whitesmoke;
+}
+
+.page-content p {
+    font-family: "Avenir Next", sans-serif;
+    font-size: large;
+    color: #333333;
+}
+
+.page-content h2 {
+    font-weight: 600;
+    font-family: 'Raleway', sans-serif;
+    font-size: xx-large;
+}
+
+.page-content h3 {
+    font-weight: 600;
+    font-family: "Avenir Next Condensed", sans-serif;
+    font-size: x-large;
+}
+
+h4 {
+    font-family: "Avenir Next", sans-serif;
+    font-size: large;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+a {
+    font-family: "Avenir Next", sans-serif;
+    font-size: large;
+    color: #333333;
+}
+
+.image-text-split > .paragraph {
+    position: relative;
+    padding-top: 40px;
+}
+
+
+.image-text-split {
+    display: flex;
+    justify-content: space-between;
+}
+
+.image-text-split > * {
+    width: 48%;
+    margin-bottom: 40px;
+}
+
+.image-text-split > .img-container > img {
+    width: 100%;
+    height: auto;
+}
+
+.image-text-split > #map {
+    height: 400px;
+}
+
+.highlight1, .highlight2, .highlight3, .highlight4 {
+    position: absolute;
+    top: 0;
+    left: -40px;
+    padding: 8px 40px;
+}
+
+.highlight1 {
+    background: url("../images/paintstrokes/yellowhighlightD.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.highlight2 {
+    background: url("../images/paintstrokes/yellowhighlightC.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.highlight3 {
+    background: url("../images/paintstrokes/yellowhighlightE.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.highlight4 {
+    background: url("../images/paintstrokes/yellowhighlightB.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+/* Media Queries ----------------------------------------------------------- */
+
+@media screen and (max-width: 1000px) {
+    .image-text-split {
+        flex-wrap: wrap-reverse;
+    }
+    .image-text-split > * {
+        width: 100%;
+    }
+}
+
+/* About Page: Floor Plan Artwork ------------------------------------------ */
+
+.image-text-split > #floor-plan-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#floor-plan {
+    position: relative;
+    left: 0;
+    top: 0;
+    height: 576px;
+    width: 384px;
+    background: whitesmoke;
+    z-index: 0;
+}
+
+#floor-plan > * {
+    border: 2px solid black;
+    background: whitesmoke;
+}
+
+#room {
+    position: absolute;
+    height: 382px;
+    width: 380px;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#hallway {
+    position: absolute;
+    height: 284px;
+    width: 284px;
+    top: 48px;
+    left: 48px;
+    z-index: 2;
+}
+
+#blank-square {
+    position: absolute;
+    height: 252px;
+    width: 252px;
+    top: 64px;
+    left: 64px;
+    background: whitesmoke;
+    z-index: 3;
+}
+
+#reception {
+    position: absolute;
+    height: 44px;
+    width: 46px;
+    top: 384px;
+    left: 48px;
+}
+
+#restaurant {
+    position: absolute;
+    height: 188px;
+    width: 188px;
+    top: 384px;
+    left: 96px;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+}
+
+#pod-room {
+    position: absolute;
+    height: 44px;
+    width: 46px;
+    top: 384px;
+}
+
+#function-room {
+    position: absolute;
+    height: 44px;
+    width: 94px;
+    top: 384px;
+    right: 0;
+}
+
+#floor-plan :not(#blank-square, #blank-square *):hover {
+    background: lightblue;
+}
+
+.pop-up {
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    visibility: hidden;
+}
+
+.pop-up img {
+    width: 50px;
+    z-index: 4;
+}
+
+.content-block > *:not(:first-child) {
+    display: none;
+}
+
+.content-block img {
+    height: 300px;
+}
+
+/* Dining Page ------------------------------------------------------------- */
+
+#chef-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #151515;
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 40px;
+}
+
+#chef-container h2 {
+    color: whitesmoke;
+}
+
+#chef-memo {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.chef-portrait {
+    display: flex;
+    width: 250px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 20px 50px;
+}
+
+.chef-portrait img {
+    width: 100%;
+    height: auto;
+    border-radius: 100%;
+}
+
+.chef-portrait h3 {
+    color: whitesmoke;
+    margin: 15px 0 0 0;
+}
+
+.chef-portrait p {
+    color: whitesmoke;
+    font-style: italic;
+    margin: 0;
+}
+
+#menu {
+    width: 75%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid grey;
+}
+
+#menu-items {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+}
+
+#food a {
+    cursor: pointer;
+}
+
+#food a:hover {
+    color: #65B8D2;
+}
+
+#price {
+    text-align: right;
+}
+
+/* Pod Cruises Page -------------------------------------------------------- */
+
+#fish-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fish-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.fish-card {
+    background: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fish-card img {
+    height: 150px;
+    width: auto;
+}
+
+#fish-section button {
+    width: auto;
+    height: auto;
+    margin: 20px 0;
+    padding: 0;
+    border: none;
+    background: none;
+    color: black;
+    font-family: "Open Sans", sans-serif;
+    font-size: medium;
+    font-weight: bold;
+    cursor: pointer;
+    display: none;
+}
+
+/* Contact Page ------------------------------------------------------------ */
+
+#contact-info {
+    margin: 20px;
+}
+
+/* Booking Page ------------------------------------------------------------ */
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form > * {
+    width: 75%;
+}
+
+.form-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.form-box > * {
+    margin: 5px 0;
+    flex-basis: 47%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-box > #address-box {
+    flex-basis: 96%;
+}
+
+.form-box > .checkbox {
+    flex-direction: row;
+}
+
+button {
+    margin: 20px 0;
+    width: 120px;
+    height: 40px;
+    font-family:  "Avenir Next", sans-serif;
+    font-size: large;
+    color: white;
+    border-radius: 3px;
+    background: rgb(101 184 210);
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: rgb(81 164 190);
+}
+
+form label {
+    font-family: "Open Sans", sans-serif;
+    font-size: small;
+    font-weight: bold;
+}
+
+#review-form {
+    position: fixed;
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border: 4px solid lightblue;
+    visibility: hidden;
+}
+
+#review-form p, h2 {
+    font-family: "Open Sans", sans-serif;
+}
+
+.review-data {
+    display: flex;
+}
+
+.review-data > :first-child {
+    width: 20%;
+    font-weight: bold;
+}
+
+#confirmation {
+    display: flex;
+    align-items: center;
+}
+
+#confirmation-text {
+    color: green;
+    font-weight: bold;
+    margin: 0 20px;
+    visibility: hidden;
+}
